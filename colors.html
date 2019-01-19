@@ -38,6 +38,7 @@
                 function updateColor()
                 {
                     document.body.style.backgroundColor = "rgb("+redSlider.value+", "+greenSlider.value+", "+blueSlider.value+")";
+                    document.body.style.color = "rgb("+((124-redSlider.value)%255)+", "+((124-greenSlider.value)%255)+", "+((124-blueSlider.value)%255)+")";
                 }
                 updateColor();
                 redSlider.oninput = function() {
