@@ -1,0 +1,110 @@
+/*******************
+ * Problem Set 5   *
+ * CS50, Fall 2018 *
+ *******************/
+
+*
+{
+    text-align: center;
+}
+
+body
+{
+    /* hex color code for Harvard crimson */
+    color: #A51C30;
+    font-size: 2.5em;
+}
+
+
+@media (min-width: 500px)
+{
+    header
+    {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 499px) 
+{
+    header
+    {
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+    }
+}
+
+div
+{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.borderClass
+{
+    border-style: solid;
+    border-color: #A51C30;
+    border-width: 7px;
+    border-radius: 7px;
+}
+
+.smallFont
+{
+    font-size: .3em;
+}
+
+/* slider css code referenced from w3schools.com */
+.slidecontainer
+{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider
+{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    background: #A51C30;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover
+{
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}

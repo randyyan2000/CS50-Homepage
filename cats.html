@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- integrate styles.css here -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <title>Cats50</title>
+
+    </head>
+    <body>
+        <header class="borderClass">
+            This is Cats50
+        </header>
+        <main>
+            <div>
+                I like cats. Press for cats ==> <button onclick="ajax_get(api_url, callback)" id="another" type="button" autofocus>Another!</button>
+            </div>
+            <!-- theCatAPI js code referenced from theCatAPI documentation: theCatAPI.com -->
+            <script>
+                function ajax_get(url, callback)
+                {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function()
+                    {
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                        {
+                            console.log('responseText:' + xmlhttp.responseText);
+                            try
+                            {
+                                var data = JSON.parse(xmlhttp.responseText);
+                            }
+                            catch(err) {
+                                console.log(err.message + " in " + xmlhttp.responseText);
+                                return;
+                            }
+                            callback(data);
+                        }
+                    };
+
+                    xmlhttp.open("GET", url, true);
+                    xmlhttp.send();
+                }
+
+                // ---- Cats
+                var api_url = 'https://api.thecatapi.com/v1/images/search?mime_type=jpg,png' // just static images
+
+                function callback(data)
+                {
+                    document.getElementById("id").innerHTML = "Image ID: "+data[0]["id"];
+
+                    var html = '<img src="' + data[0]["url"] + '">';
+                    document.getElementById("image").innerHTML = html;
+                };
+
+                ajax_get(api_url, callback);
+            </script>
+            <div id="id"></div>
+            <div id="image"></div>
+        </main>
+        <footer>
+            Demo images and api courtesy of The Cat API <a href="https://thecatapi.com/">TheCatApi.com</a><br>
+            <a href="index.html">Back to home</a>
+        </footer>
+    </body>
+</html>

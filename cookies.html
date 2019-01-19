@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- integrate styles.css here -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <title>Cookies50</title>
+    </head>
+    <body>
+        <header class="borderClass">
+            This is Cookies50
+        </header>
+        <main>
+            <p>
+                I like cookies. Here's a cookie.
+            </p>
+            <img id="cookie" src="cookie.png" alt="A cookie.">
+        </main>
+        <footer>
+            <div id="cookiesAlert" class="smallFont alert alert-info alert-dismissible fade show" role="alert">
+                This website uses cookies to ensure you get the best experience.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button><hr>
+                (No cookies were or are harmed in the creation and usage of this website &#9786;)
+            </div>
+            <a href="index.html">Back to home</a>
+        </footer>
+        <script>
+            /* Bootstrap alert js code referenced from Bootstrap getBootstrap.com*/
+            $(function()
+            {
+               $(".close").click(function()
+               {
+                  $("#cookiesAlert").alert('close');
+               });
+            });
+        </script>
+    </body>
+</html>
